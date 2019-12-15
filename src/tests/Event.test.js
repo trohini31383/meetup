@@ -24,7 +24,7 @@ describe('<Event /> component', () => {
 
       duration: 9000000,
 
-      id: "263370107",
+      id: 263370107,
 
       name: "Microservices mit dem MicroProfile 3.x",
 
@@ -151,7 +151,7 @@ describe('<Event /> component', () => {
 
   test('test that event__Overview children are rendered', () => {
 
-    expect(EventWrapper.find('.event__Overview').children()).toHaveLength(4);
+    expect(EventWrapper.find('.event__Overview').children()).toHaveLength(3);
 
   });
   test('test that event__Details children are rendered', () => {

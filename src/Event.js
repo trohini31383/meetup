@@ -31,7 +31,7 @@ class Event extends Component {
 
   render() {
     const showDetails = this.state.showDetails;
-    const event = this.props.event;
+
     return (
 
       <div className="event">
@@ -40,7 +40,7 @@ class Event extends Component {
 
           <p className="event__Overview--localDate">{this.props.event.local_date}</p>
 
-          <p className="event__Overview--groupName">{this.props.event.group.name}</p>
+
 
           {showDetails &&
 

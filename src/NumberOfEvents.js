@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class NumberOfEvents extends Component {
 
 
@@ -35,6 +36,8 @@ class NumberOfEvents extends Component {
         infoText: '',
 
       });
+
+
     }
   }
 
