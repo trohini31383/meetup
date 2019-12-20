@@ -125,7 +125,7 @@ async function getOrRenewAccessToken(type, key) {
 
     // Lambda endpoint to get token by code
 
-    url = 'https://7tglpk3auh.execute-api.eu-central-1.amazonaws.com/dev/api/token'
+    url = 'https://7tglpk3auh.execute-api.eu-central-1.amazonaws.com/dev/api/token/'
 
       + key;
 
@@ -133,7 +133,7 @@ async function getOrRenewAccessToken(type, key) {
 
     // Lambda endpoint to get token by refresh_token
 
-    url = 'https://7tglpk3auh.execute-api.eu-central-1.amazonaws.com/dev/api/refresh/{code}'
+    url = 'https://7tglpk3auh.execute-api.eu-central-1.amazonaws.com/dev/api/refresh/'
 
       + key;
 

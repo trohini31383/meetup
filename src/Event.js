@@ -31,6 +31,7 @@ class Event extends Component {
 
   render() {
     const showDetails = this.state.showDetails;
+    const events = this.props.event;
 
     return (
 
