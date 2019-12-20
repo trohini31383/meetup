@@ -31,7 +31,9 @@ class Event extends Component {
 
   render() {
     const showDetails = this.state.showDetails;
-    const events = this.props.event;
+    const event = this.props.event;
+
+
 
     return (
 
@@ -41,7 +43,11 @@ class Event extends Component {
 
           <p className="event__Overview--localDate">{this.props.event.local_date}</p>
 
+          {this.props.event.venue &&
 
+            <p className="event__Overview--venue">@{this.props.event.venue.name} | {this.props.event.venue.address_1} | {this.props.event.venue.city}</p>
+
+          }
 
           {showDetails &&
 
@@ -57,12 +63,14 @@ class Event extends Component {
 
 
         </div>
-        <div className="event__Details">
+        {showDetails &&
+          <div className="event__Details">
 
-          <h3>Infos</h3>
-          <h4><a href={this.props.event.link} target="blank">Visit MeetUp</a></h4>
-          <p className="event__Details--description">{this.props.event.description}</p>
-        </div>
+            <h3>Infos</h3>
+            <h4><a href={this.props.event.link} target="blank">Visit MeetUp</a></h4>
+            <p className="event__Details--description">{this.props.event.description}</p>
+          </div>
+        }
 
 
 

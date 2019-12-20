@@ -139,7 +139,7 @@ describe('<Event /> component', () => {
 
   test('test that event wrapping div just shows event__Overview', () => {
 
-    expect(EventWrapper.find('.event').children()).toHaveLength(2);
+    expect(EventWrapper.find('.event').children()).toHaveLength(1);
 
   });
 
@@ -151,7 +151,7 @@ describe('<Event /> component', () => {
 
   test('test that event__Overview children are rendered', () => {
 
-    expect(EventWrapper.find('.event__Overview').children()).toHaveLength(3);
+    expect(EventWrapper.find('.event__Overview').children()).toHaveLength(4);
 
   });
   test('test that event__Details children are rendered', () => {
@@ -168,7 +168,7 @@ describe('<Event /> component', () => {
 
   test('test that show/hide details button is rendered', () => {
 
-    expect(EventWrapper.find('.details-btn')).toHaveLength(1);
+    expect(EventWrapper.find('.event__Overview button')).toHaveLength(1);
 
   });
   test('click on button should show details', () => {
@@ -179,14 +179,14 @@ describe('<Event /> component', () => {
 
     });
 
-    EventWrapper.find('.details-btn').simulate('click');
+    EventWrapper.find('.event__Overview button').simulate('click');
 
     expect(EventWrapper.state('showDetails')).toBe(true);
 
   });
 
 
-})
+});
 
 
 

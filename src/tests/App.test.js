@@ -44,6 +44,28 @@ describe('<App /> integration', () => {
     AppWrapper.unmount();
   });
 
+  test('update List of events after user changes number of events', () => {
+
+    const AppWrapper = mount(<App />);
+
+    AppWrapper.instance().updateEvents = jest.fn();
+
+    AppWrapper.instance().forceUpdate();
+
+    const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
+
+    NumberOfEventsWrapper.instance().handleInputChanged({ target: { value: 1 } });
+
+    expect(AppWrapper.instance().updateEvents).toHaveBeenCalledTimes(1);
+
+    expect(AppWrapper.instance().updateEvents).toHaveBeenCalledWith(null, null, 1);
+
+    AppWrapper.unmount();
+
+  });
+
+
+
 
 
 

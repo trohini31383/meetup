@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import App from './App';
 
 
 class NumberOfEvents extends Component {
@@ -36,6 +37,9 @@ class NumberOfEvents extends Component {
         infoText: '',
 
       });
+
+      this.props.
+        updateEvents(null, null, value);
 
 
     }
