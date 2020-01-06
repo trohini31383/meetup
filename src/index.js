@@ -14,4 +14,3 @@ serviceWorker.unregister();
 atatus.config('382c94f2def342cd8bab67d57ec29a09').install();
 
 
-atatus.notify(new Error('Test Atatus Setup'));
