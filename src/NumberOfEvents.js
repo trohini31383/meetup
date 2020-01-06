@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import App from './App';
-
+import { ErrorAlert } from './Alert';
 
 class NumberOfEvents extends Component {
 
