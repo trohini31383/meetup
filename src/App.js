@@ -33,7 +33,7 @@ class App extends Component {
 
     } else {
 
-      this.setState({ warningText: '' })
+      this.setState({ warningText: '' });
 
     }
     if (lat && lon) {
@@ -70,6 +70,7 @@ class App extends Component {
     return (
       <div className="App">
         <h3>Checkout some cool events happening in your city !!</h3>
+        <WarningAlert text={this.state.warningText} />
         <CitySearch updateEvents={this.updateEvents} />
 
         <NumberOfEvents
@@ -81,7 +82,7 @@ class App extends Component {
 
           lon={this.state.lon}
         />
-        <WarningAlert text={this.state.warningText} />
+
 
         <EventList events={this.state.events} />
 
