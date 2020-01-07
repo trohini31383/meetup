@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
+import { WarningAlert } from './Alert';
 import { getEvents } from './api';
 import './App.css';
 
@@ -20,10 +21,21 @@ class App extends Component {
     events: [],
     page: null,
     lat: null,
-    lon: null
+    lon: null,
+    warningText: ''
   };
 
   updateEvents = (lat, lon, page) => {
+
+    if (!navigator.onLine) {
+
+      this.setState({ warningText: 'No Network Connection! Event list loaded from last session.' });
+
+    } else {
+
+      this.setState({ warningText: '' })
+
+    }
     if (lat && lon) {
 
       getEvents(lat, lon, this.state.page).then(response =>
@@ -59,6 +71,7 @@ class App extends Component {
       <div className="App">
         <h3>Checkout some cool events happening in your city !!</h3>
         <CitySearch updateEvents={this.updateEvents} />
+        <WarningAlert text={this.state.warningText} />
         <NumberOfEvents
           updateEvents={this.updateEvents}
 
