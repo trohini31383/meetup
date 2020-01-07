@@ -116,7 +116,9 @@ async function getEvents(lat, lon, page) {
 
     return events;
   }
-};
+
+  return [];
+}
 function getAccessToken() {
 
   const accessToken = localStorage.getItem('access_token');
