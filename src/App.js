@@ -71,7 +71,7 @@ class App extends Component {
       <div className="App">
         <h3>Checkout some cool events happening in your city !!</h3>
         <CitySearch updateEvents={this.updateEvents} />
-        <WarningAlert text={this.state.warningText} />
+
         <NumberOfEvents
           updateEvents={this.updateEvents}
 
@@ -81,6 +81,7 @@ class App extends Component {
 
           lon={this.state.lon}
         />
+        <WarningAlert text={this.state.warningText} />
 
         <EventList events={this.state.events} />
 
