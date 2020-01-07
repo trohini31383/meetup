@@ -64,6 +64,8 @@ async function getEvents(lat, lon, page) {
     return JSON.parse(events);
   }
 
+  return events;
+
   const token = await getAccessToken();
 
 
