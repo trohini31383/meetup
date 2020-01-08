@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
-import { WarningAlert, OfflineAlert } from './Alert';
+import { OfflineAlert } from './Alert';
 import { getEvents } from './api';
 import './App.css';
 
