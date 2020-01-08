@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
-import { OfflineAlert } from './Alert';
+import { WarningAlert, OfflineAlert } from './Alert';
 import { getEvents } from './api';
 import './App.css';
 
@@ -52,15 +52,15 @@ class App extends Component {
 
   updateEvents = (lat, lon, page) => {
 
-    if (!navigator.onLine) {
+    //if (!navigator.onLine) {
 
-      this.setState({ warningText: 'No Network Connection! Event list loaded from last session.' });
+    //this.setState({ warningText: 'No Network Connection! Event list loaded from last session.' });
 
-    } else {
+    //} else {
 
-      this.setState({ warningText: '' });
+    // this.setState({ warningText: '' });
 
-    }
+    //}
     if (lat && lon) {
 
       getEvents(lat, lon, this.state.page).then(response =>
