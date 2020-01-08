@@ -188,7 +188,7 @@ class App extends Component {
 
             <XAxis type="category" dataKey="date" name="date" />
 
-            <YAxis type="number" dataKey="number" name="number of events" />
+            <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
 
             <Tooltip cursor={{ strokeDasharray: '3 3' }} />
 

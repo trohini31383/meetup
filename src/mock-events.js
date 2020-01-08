@@ -40,7 +40,7 @@ const mockEvents = {
 
       time: 1566925200000,
 
-      local_date: "2019-09-26",
+      local_date: "2020-01-09",
 
       local_time: "19:00",
 
@@ -132,7 +132,7 @@ const mockEvents = {
 
       time: 1566925200000,
 
-      local_date: "2019-09-27",
+      local_date: "2020-01-10",
 
       local_time: "19:00",
 
@@ -224,7 +224,7 @@ const mockEvents = {
 
       time: 1566925200000,
 
-      local_date: "2019-09-28",
+      local_date: "2020-01-11",
 
       local_time: "19:00",
 
@@ -316,7 +316,7 @@ const mockEvents = {
 
       time: 1566925200000,
 
-      local_date: "2019-09-29",
+      local_date: "2020-01-12",
 
       local_time: "19:00",
 
@@ -408,7 +408,7 @@ const mockEvents = {
 
       time: 1566925200000,
 
-      local_date: "2019-09-29",
+      local_date: "2020-01-13",
 
       local_time: "19:00",
 
@@ -500,7 +500,7 @@ const mockEvents = {
 
       time: 1566925200000,
 
-      local_date: "2019-09-30",
+      local_date: "2020-01-14",
 
       local_time: "19:00",
 
@@ -592,7 +592,7 @@ const mockEvents = {
 
       time: 1566925200000,
 
-      local_date: "2019-10-01",
+      local_date: "2020-01-15",
 
       local_time: "19:00",
 
@@ -682,7 +682,7 @@ const mockEvents = {
 
       time: 1566925200000,
 
-      local_date: "2019-10-01",
+      local_date: "2020-01-16",
 
       local_time: "19:00",
 
