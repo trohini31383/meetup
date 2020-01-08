@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
-import { WarningAlert } from './Alert';
+import { OfflineAlert } from './Alert';
 import { getEvents } from './api';
 import './App.css';
 
@@ -14,7 +14,7 @@ class App extends Component {
   componentDidMount() {
 
     getEvents().then(response => this.setState({ events: response }));
-    // window.addEventListener('online', this.offLineAlert());
+    window.addEventListener('online', this.offLineAlert());
 
   }
 
@@ -28,27 +28,27 @@ class App extends Component {
     warningText: ''
   };
 
-  // offLineAlert = () => {
+  offLineAlert = () => {
 
-  //if (navigator.onLine === false) {
+    if (navigator.onLine === false) {
 
-  // this.setState({
+      this.setState({
 
-  // warningText: 'You appear to be offline, this list is cached. Please connect to the internet for an updated list.'
+        warningText: 'You appear to be offline, this list is cached. Please connect to the internet for an updated list.'
 
-  // });
+      });
 
-  // } else {
+    } else {
 
-  // this.setState({
+      this.setState({
 
-  //warningText: '',
+        warningText: '',
 
-  // });
+      });
 
-  // }
+    }
 
-  // }
+  }
 
   updateEvents = (lat, lon, page) => {
 
@@ -95,7 +95,7 @@ class App extends Component {
     return (
       <div className="App">
         <h3>Checkout some cool events happening in your city !!</h3>
-        <WarningAlert text={this.state.warningText} />
+        <OfflineAlert text={this.state.warningText} />
 
         <CitySearch updateEvents={this.updateEvents} />
 
