@@ -171,33 +171,31 @@ class App extends Component {
           lon={this.state.lon}
         />
 
+        <ResponsiveContainer height={400}>
+
+          <ScatterChart
 
 
-        <ScatterChart
+            margin={{
 
-          width={400}
+              top: 20, right: 20, bottom: 20, left: 20,
 
-          height={400}
+            }}
 
-          margin={{
+          >
 
-            top: 20, right: 20, bottom: 20, left: 20,
+            <CartesianGrid />
 
-          }}
+            <XAxis type="category" dataKey="date" name="date" />
 
-        >
+            <YAxis type="number" dataKey="number" name="number of events" />
 
-          <CartesianGrid />
+            <Tooltip cursor={{ strokeDasharray: '3 3' }} />
 
-          <XAxis type="category" dataKey="date" name="date" />
+            <Scatter data={this.getData()} fill="#8884d8" />
 
-          <YAxis type="number" dataKey="number" name="number of events" />
-
-          <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-
-          <Scatter data={this.getData()} fill="#8884d8" />
-
-        </ScatterChart>
+          </ScatterChart>
+        </ResponsiveContainer>
 
 
 
