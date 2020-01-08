@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
-import { WarningAlert, OfflineAlert } from './Alert';
+import { WarningAlert } from './Alert';
 import { getEvents } from './api';
 import './App.css';
 
@@ -96,7 +96,7 @@ class App extends Component {
       <div className="App">
         <h3>Checkout some cool events happening in your city !!</h3>
         <WarningAlert text={this.state.warningText} />
-        <OfflineAlert text={this.state.warningText} />
+
         <CitySearch updateEvents={this.updateEvents} />
 
         <NumberOfEvents
