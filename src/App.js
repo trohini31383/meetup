@@ -14,7 +14,7 @@ class App extends Component {
   componentDidMount() {
 
     getEvents().then(response => this.setState({ events: response }));
-    window.addEventListener('online', this.offLineAlert());
+    // window.addEventListener('online', this.offLineAlert());
 
   }
 
@@ -28,39 +28,39 @@ class App extends Component {
     warningText: ''
   };
 
-  offLineAlert = () => {
+  // offLineAlert = () => {
 
-    if (navigator.onLine === false) {
+  //if (navigator.onLine === false) {
 
-      this.setState({
+  // this.setState({
 
-        warningText: 'You appear to be offline, this list is cached. Please connect to the internet for an updated list.'
+  // warningText: 'You appear to be offline, this list is cached. Please connect to the internet for an updated list.'
 
-      });
+  // });
 
-    } else {
+  // } else {
 
-      this.setState({
+  // this.setState({
 
-        warningText: '',
+  //warningText: '',
 
-      });
+  // });
 
-    }
+  // }
 
-  }
+  // }
 
   updateEvents = (lat, lon, page) => {
 
-    //if (!navigator.onLine) {
+    if (!navigator.onLine) {
 
-    //this.setState({ warningText: 'No Network Connection! Event list loaded from last session.' });
+      this.setState({ warningText: 'No Network Connection! Event list loaded from last session.' });
 
-    // } else {
+    } else {
 
-    //this.setState({ warningText: '' });
+      this.setState({ warningText: '' });
 
-    //}
+    }
     if (lat && lon) {
 
       getEvents(lat, lon, this.state.page).then(response =>
